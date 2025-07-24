@@ -11,9 +11,12 @@
   },
   "author": "",
   "license": "ISC",
-  "type" : "module",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/derek750/Anime-Recommender/issues"
   },
-  "homepage": "https://github.com/derek750/Anime-Recommender#readme"
+  "homepage": "https://github.com/derek750/Anime-Recommender#readme",
+  "dependencies": {
+    "typescript": "^5.8.3"
+  }
 }
