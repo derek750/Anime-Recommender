@@ -5,9 +5,18 @@ import io
 
 dataset_api = Blueprint('dataset_api', __name__, url_prefix='/api')
 
-@dataset_api.route('/dataset')
+@dataset_api.route('/dataset', methods=['GET'])
 def get_data():
-    csv_url = "https://raw.githubusercontent.com/LeoRigasaki/Anime-dataset/refs/heads/main/data/raw/anime_seasonal_20250724.csv"    
+
+    data_url = "https://api.github.com/repos/LeoRigasaki/Anime-dataset/contents/data/raw"  
+    response = requests.get(data_url)
+    files = response.json()
+
+    for file in files:
+        if file['name'].startswith("anime_seasonal") and file['name'].endswith(".csv"):
+            csv_url = file['download_url']
+            break
+
     response = requests.get(csv_url)
 
     if response.status_code == 200:
