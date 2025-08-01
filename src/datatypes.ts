@@ -1,0 +1,31 @@
+export type Anime = {
+    anime_id: number;
+    title: string;
+    english_title: string | null;
+    japanese_title: string | null;
+    type: string;
+    episodes: number | null;
+    duration: string | null; 
+    status: string;
+    source: string | null;
+    season: string | null;
+    studios: string | null;
+    genres: string | null; // spaced by commas
+    rating: string | null;
+    score: number | null;
+    scored_by: number | null;
+    rank: number | null;
+    popularity: number | null;
+    members: number | null;
+    favorites: number | null;
+    watching: number | null;
+    completed: number | null;
+    on_hold: number | null;
+    dropped: number | null;
+    plan_to_watch: number | null;
+    start_date: string | null;
+    end_date: string | null;
+    broadcast_day: string | null;
+    broadcast_time: string | null;
+    synopsis: string | null;
+  };
